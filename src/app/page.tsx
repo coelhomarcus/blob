@@ -168,11 +168,11 @@ const Page = () => {
         <p className="text-white">{data.weather[0].main}</p>
         <div className="p-5 bg-white/20 backdrop-blur-sm border border-white/30 text-white w-full rounded-2xl ">
           <div className="flex justify-between">
-            <QuickInfo icon={<RiDropFill />} value={data.main.humidity + "%"} />
-            <QuickInfo icon={<FaWind />} value={data.wind.speed + " km/h"} />
+            <QuickInfo icon={<RiDropFill />} value={(data.main.humidity).toFixed() + "%"} />
+            <QuickInfo icon={<FaWind />} value={(data.wind.speed).toFixed() + " km/h"} />
             <QuickInfo
               icon={<IoRainySharp />}
-              value={dataPrev.list[0].pop * 100 + "%"}
+              value={(dataPrev.list[0].pop * 100).toFixed() + "%"}
             />
           </div>
         </div>
